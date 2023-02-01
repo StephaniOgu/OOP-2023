@@ -1,8 +1,8 @@
-package ie.tudublin;
+package ie.tudublin.lecture2;
 
 import processing.core.PApplet;
 
-public class HelloProcessing extends PApplet
+public class IlluminatesDrowing extends PApplet
 {
 	int screenSize = 500;
 	
@@ -28,20 +28,6 @@ public class HelloProcessing extends PApplet
 		circle(screenSize/2, screenSize/2, screenSize/100*25);
 		fill(mouseX, mouseY, mouseY);
 
-		circle(mouseX, mouseY, 50);
-
-
-		// stroke(255);
-		// fill(0, 255, 255);s
-		// line(10, 10, 100, 100); //x1, y1, x2, y2
-		// circle(100, 250, 70); //cx, cy, d
-		// fill(255, 255, 0);
-		// rect(10, 300, 10, 100); //tlx, tly, w, h
-		// fill(0, 0, 255);
-		// noStroke();
-		// noFill();
-		// strokeWeight(15);
-		// triangle(40, 90, 300, 20, 90, 70);
-		// stroke(127);
+		//circle(mouseX, mouseY, 50);
 	}
 }

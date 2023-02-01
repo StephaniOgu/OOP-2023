@@ -1,13 +1,6 @@
-package ie.tudublin;
+package ie.tudublin.lab1;
 
-public class Main
-{
-
-	public static void helloProcessing()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new HelloProcessing());
-    }
+public class Main{
 
 	public static void main(String[] args)
 	{
@@ -21,10 +14,6 @@ public class Main
 		for(int i = 0; i<9; i++){
 			ginger.kill();
 		}
-
-
-		helloProcessing();
-
 	}
 	
 }

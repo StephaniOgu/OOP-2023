@@ -1,4 +1,4 @@
-package ie.tudublin;
+package ie.tudublin.lab1;
 
 public class Cat
 {
