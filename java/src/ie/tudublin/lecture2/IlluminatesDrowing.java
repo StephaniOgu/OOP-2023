@@ -6,16 +6,16 @@ public class IlluminatesDrowing extends PApplet
 {
 	int screenSize = 500;
 	
+	@Override
 	public void settings(){
 		size(500, 500);
 	}
-
+	@Override
 	public void setup() {
-		background(255, 0, 0);
-		
-		
+		background(255, 0, 0);	
 	}
-	
+
+	@Override
 	public void draw(){	
 		noStroke();
 		fill(255, 255, 0);
@@ -27,7 +27,6 @@ public class IlluminatesDrowing extends PApplet
 		fill(1, 1, 1);
 		circle(screenSize/2, screenSize/2, screenSize/100*25);
 		fill(mouseX, mouseY, mouseY);
-
 		//circle(mouseX, mouseY, 50);
 	}
 }

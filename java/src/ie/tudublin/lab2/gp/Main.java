@@ -1,4 +1,4 @@
-package ie.tudublin.lab2;
+package ie.tudublin.lab2.gp;
 
 public class Main {
 
@@ -14,6 +14,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		part1();
-		part2();
+		//part2();
 	}
 }

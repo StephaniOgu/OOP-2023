@@ -1,4 +1,4 @@
-package ie.tudublin.lab2;
+package ie.tudublin.lab2.gp;
 import processing.core.PApplet;
 
 public class Part2 extends PApplet{
@@ -19,7 +19,6 @@ public class Part2 extends PApplet{
 	}
 
     @Override
-    public void draw(){	
-                 
+    public void draw(){
 	}
 }
