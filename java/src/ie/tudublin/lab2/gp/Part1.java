@@ -1,4 +1,4 @@
-package ie.tudublin.lab2;
+package ie.tudublin.lab2.gp;
 import processing.core.PApplet;
 
 
