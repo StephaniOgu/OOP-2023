@@ -9,6 +9,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new HelloProcessing());
     }
 
+	public static void loops()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Loops());
+    }
+
 	public static void bugZap()
 	{
 		String[] a = {"MAIN"};
@@ -22,16 +28,7 @@ public class Main
 		penny.setName("Penny");
 		penny.speak();
 
-		System.out.println("-- Cat executing -- \n");
-		Cat ginger = new Cat("Ginger");
-		for(int i = 0; i<9; i++){
-			ginger.kill();
-		}
-
-
-		helloProcessing();
-
-		bugZap();
+		loops();
 	}
 	
 }
