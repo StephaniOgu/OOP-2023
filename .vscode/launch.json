@@ -46,6 +46,41 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "ie.tudublin.lab2.oop.Main",
+            "projectName": "java"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "ie.tudublin.lab2.gp.Main",
+            "projectName": "java"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "ie.tudublin.lab2.Main",
+            "projectName": "java"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "ie.tudublin.lecture2.Main",
+            "projectName": "java"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "ie.tudublin.lab1.Main",
+            "projectName": "java"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "ie.tudublin.Main",
             "projectName": ""
         },
