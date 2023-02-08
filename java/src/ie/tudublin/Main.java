@@ -9,6 +9,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new HelloProcessing());
     }
 
+	public static void bugZap()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new BugZap());
+    }
+	
 	public static void main(String[] args)
 	{
 		System.out.println("-- Dog executing -- \n");
@@ -25,6 +31,7 @@ public class Main
 
 		helloProcessing();
 
+		bugZap();
 	}
 	
 }

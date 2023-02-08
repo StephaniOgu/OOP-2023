@@ -42,6 +42,178 @@ Resources
 - https://github.com/skooter500/OOP_Labtest1_2017_Starter
 - https://github.com/skooter500/OOP-LabTest1-2016
 
+# Week 3
+- No class because of the bank holiday
+- Lots of amazing things happened in tech!
+
+### Lab
+
+What a time to be alive!
+
+Here are three ideas for todays lab. Pick one:
+
+- I had the idea to include git commits on forks of this repo each week as part of the grade. Making a branch for each lab and some commits each week counts towards the final mark. To do this I need a Python program that:
+	- loads a csv file with student names, numbers and repo urls
+	- Has a set of rules for allocating marks for commits like, creating a branch and making 5 commits each week on the branch gets a point
+	- Uses the Github api to get this info for each student url
+	- Outputs this to csv file
+	- Make a git repo for your project and share it with me!
+
+- If you are making a game for [Games Fleadh](https://gamesfleadh.ie/) or even if you dont plan, you should check out Godot Game Engine. Its Oh My Wow! Holy Jingle Bells. Download it watch my [classes on Godot](https://github.com/skooter500/GE2-2023) (unedited) or do some tutorials. 
+
+- Here is a lab all about [using git](gitlab.md)
+
+- Try these programming exercises:
+
+Update your forks and create a branch on your repos for your work today:
+
+Today you can edit the file Loops.java and try out these procedural drawing exercises. The variable ```mode``` will have the value of 0-9 depending on which number key is pressed. You can use it to switch the pattern being drawn:
+
+### if statement 
+
+- 3 exercises. Click the image for video:
+
+[![YouTube](http://img.youtube.com/vi/18kMOeygmHA/0.jpg)](https://www.youtube.com/watch?v=18kMOeygmHA)
+
+### for loops:
+
+Use a loop, rect and the HSB colour space:
+
+![Sketch](images/p31.png)
+
+Use a loop, rect and the HSB colour space:
+
+![Sketch](images/p35.png)
+
+Use a loop, rect and the HSB colour space:
+
+![Sketch](images/p36.png)
+
+Use a loop, ellipse, and the HSB colour space:
+
+![Sketch](images/p34.png)
+
+Use a loop, ellipse and the HSB color space to draw this:
+
+![Sketch](images/p33.png)
+
+Use a nested loop to draw this:
+
+![Sketch](images/p32.png)
+
+Try and draw this using ONE for loop. You will need the [text](https://processing.org/reference/text_.html) and [textAlign](https://processing.org/reference/textAlign_.html) functions:
+
+![Sketch](images/p27.png)
+
+Use a nested loop to draw this:
+
+![Sketch](images/p23.png)
+
+Use sin and cos to draw this:
+
+![Sketch](images/p30.png)
+
+Use line, sin and cos to draw regular polygons like squares, pentagons, octogons etc:
+
+![Sketch](images/p10.png)
+
+Draw a procedural star like these:
+
+![Sketch](images/p5.png)
+
+# Week 2 - Introduction to drawing with Processing libraries
+
+## Lecture
+- [Recording of the class](https://tudublin-my.sharepoint.com/:v:/g/personal/bryan_duggan_tudublin_ie/EVMza0r4Z2hFuMUml87RwMsBE5yPcc7J_UArimAKbAFWlQ?e=ePh9de) 
+
+## Tutorial
+- [Recording](https://tudublin-my.sharepoint.com/:v:/g/personal/bryan_duggan_tudublin_ie/ERXftZvs-4xJsE8KwounpAsBVd85RQAn2jMdIJ1tsrAvfA?e=VG5uBx) 
+
+## Lab
+
+## Learning Outcomes
+- Practice drawing stuff and working out co-ordinates
+- Practice using variables and if statements in Java
+
+This is a video of a silly game called Bugzap made in Java using the Processing libraries. 
+
+[![YouTube](http://img.youtube.com/vi/s6PA8jtWneQ/0.jpg)](https://www.youtube.com/watch?v=s6PA8jtWneQ)
+
+How you should do it:
+
+Ok let's get the main game working first and not worry about the splash screen and the game over screen
+
+- Update your fork of the repository from the master branch. To do this, cd to the folder where you have cloned *your* repository, (or clone it somewhere if you need to) and type:
+
+```bash
+git checkout master
+git pull upstream master
+```
+
+- Create a branch for your work today by typing:
+
+```
+git checkout -b lab2
+```
+
+- Create a new class called BugZap.java in the ie.tudublin folder. Make it extend ```PApplet``` and add the ```settings```, ```setup``` and ```draw``` methods. Check out HelloProcessing2.java if you need examples for these. This class also has examples of the drawing methods with comments. You can also check out the [Processing reference]() if you are unsure about any of the methods.
+- Call ```size``` in ```settings``` to set the size of the drawing window. 
+- Edit the file Main.java so that it starts the BugZap class instead of the HelloProcessing2 class. I'll let you figure out how to do this :-)
+- Make sure everything works by compiling and running your program before continuing!
+
+Now we can draw the bug.
+
+- Make fields of type ```float``` in the BugZap class for ```playerX```, ```playerY``` and ```playerWidth``` and give these default values. You can decide what these should be. There are built in variables called ```width``` and ```height``` that give the width and height of the drawing window. These only get assigned after size has been called, so if you want to use these to give values to playerX, playerY etc. put the code into the *setup* method. 
+- Write a method called void ```void drawPlayer(float x, float y, float w)``` that draws the player character, centered around the parameters x, y. You can use the line method to do this. You can pass variables as parameters to this method and also things like ```x + 20```, ```w * 0.5f``` etc. I made an extra variable in this method called h for the height and set it to be half the w parameter. Don't forget to set the stroke color!
+- Call this method from ```draw```, passing in the parameters playerX, playerY and playerWidth.
+- Compile and run everything to make sure it's working before continuing.
+- If everything is working ok, you should see the bug on the screen
+
+Now lets get the player moving in response to the keys
+
+Add this method to BugZap.java:
+
+```Java
+public void keyPressed()
+	{
+		if (keyCode == LEFT)
+		{
+			System.out.println("Left arrow pressed");
+		}
+		if (keyCode == RIGHT)
+		{
+			System.out.println("Right arrow pressed");
+		}
+		if (key == ' ')
+		{
+			System.out.println("SPACE key pressed");
+		}
+	}	
+```
+
+- If you compile and run the program again you will see that some messages get printed out when you press various keys. If you are running in Visual Studio Code, you will see these messages appear in the Debug Console
+- Modify this method to increment and decrement the playerX variable instead and you should be able to get the player to move left and right
+- You might want to add if statements to this method to stop the player moving off the left and right side of the screens. If statements in Java are almost the same as in C!
+- When the player presses SPACE you will want to draw a line for the player's laser.
+
+The Bug
+
+- In a similar way to how you made the player, make the Bug. Make variables and drawBug method. Don't forget to call the method from draw()
+- To move the bug you can add a random amount to it's x coordinate on intervals. To generate a random number you can use the [random](https://processing.org/reference/random_.html) function.  
+- One way to make stuff happen on an interval rather than every frame is to use the frameCount variable. This variable is a field in PApplet and it gets incremented automatically every time draw is called. Because draw gets called 60 times a second, you can do something every second with this code:
+
+```Java
+if ((frameCount % 60) == 0)
+{
+    // Do something
+}
+```
+
+- You can print text to the screen using the [text](https://processing.org/reference/text_.html) function.
+
+Ok you should now have the basics working. See if you can figure out how to check to see if the player hits the bug, add scoring, splash screen, game over screen and sound.
+
+
 # Week 1 - Introduction
 
 ## Lecture
