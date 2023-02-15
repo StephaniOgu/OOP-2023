@@ -25,8 +25,8 @@ public class StarMap extends PApplet
 	}
 
 	public void drawGrid(){
-		strokeWeight(2);
-		stroke(0, 255, 0);
+		strokeWeight(1);
+		stroke(216,191,216);
 	
 		int xHorisontal = gridCellSize;
 		int yVertical = xHorisontal;
