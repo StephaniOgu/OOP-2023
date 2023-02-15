@@ -25,6 +25,7 @@ public class StarMap extends PApplet
 	}
 
 	public void drawGrid(){
+		strokeWeight(2);
 		stroke(0, 255, 0);
 	
 		int xHorisontal = gridCellSize;
@@ -52,19 +53,20 @@ public class StarMap extends PApplet
 	}
 
 	void drawStar(Star star){
-		fill(255,233,0);
-		int mappedHeight = height/cellCount;
-		int mappedWeight = width/cellCount;
-
-		float x = star.xG<0 ? width/2 -1 * star.xG : star.xG + width/2;
-		float y = star.zG<0 ? width/2 -1 * star.yG : star.yG + height/2;
-
-		//float x = gridCellSize + xAdd * gridCellSize;
-		//float y = gridCellSize + yAdd * gridCellSize;
-
-
-
-		text("+", x, y);
+		int starCenerRadus = 3;
+		//formula: 
+		//output = output_start + ((output_end - output_start) / (input_end - input_start)) * (input - input_start)
+		float x = gridCellSize + ((gridCellSize * cellCount - gridCellSize) / (5 - -5)) * (star.xG - -5);
+		float y = gridCellSize + ((gridCellSize * cellCount - gridCellSize) / (5 - -5)) * (star.yG - -5);
+		
+		stroke(255,233,0);
+		line(x, y-starCenerRadus, x, y+starCenerRadus);
+		line(x-starCenerRadus, y, x+starCenerRadus, y);
+		
+		strokeWeight(1);
+		stroke(255, 0, 0);
+		noFill();
+		circle(x, y, star.absMag);
 	}
 		
 	public void draw()
