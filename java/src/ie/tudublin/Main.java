@@ -1,5 +1,7 @@
 package ie.tudublin;
 
+import ie.tudublin.lab4.StarMap;
+
 public class Main
 {
 
