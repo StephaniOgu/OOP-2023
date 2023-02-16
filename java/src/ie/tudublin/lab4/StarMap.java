@@ -3,6 +3,8 @@ package ie.tudublin.lab4;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.w3c.dom.Text;
+
 import processing.data.*;
 
 import processing.core.PApplet;
@@ -53,7 +55,7 @@ public class StarMap extends PApplet
 	}
 
 	void drawStar(Star star){
-		int starCenerRadus = 3;
+		float starCenerRadus = star.absMag/2;
 		//formula: 
 		//output = output_start + ((output_end - output_start) / (input_end - input_start)) * (input - input_start)
 		float x = gridCellSize + ((gridCellSize * cellCount - gridCellSize) / (5 - -5)) * (star.xG - -5);
@@ -67,6 +69,9 @@ public class StarMap extends PApplet
 		stroke(255, 0, 0);
 		noFill();
 		circle(x, y, star.absMag);
+
+		textSize(11); 
+		text(star.displayName, x+starCenerRadus+5, y);
 	}
 		
 	public void draw()
