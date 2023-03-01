@@ -1,6 +1,7 @@
 package ie.tudublin;
 
 public class PitchSpeller {
+    //http://www.swarthmore.edu/NatSci/ceverba1/Class/e5_2006/MusicalScales.html
     float[] frequencies = {
         //4
         293.66f, //d4
@@ -73,6 +74,20 @@ public class PitchSpeller {
         "d''"};
    
     public String spell(float frequency) {
+        if(spellings.length != frequencies.length){
+            throw new IndexOutOfBoundsException();
+        }
+        for(int i = 0; i<frequencies.length; i++ ){
+            if(frequency < frequencies[i+1]){
+                float minLeft = frequency -  frequencies[i];
+                float right = frequencies[i + 1] - frequency;
+                if(minLeft<right){
+                    return spellings[i];
+                } else{
+                    return spellings[i + 1];
+                }
+            }
+        }
         return "";
     }
 }
