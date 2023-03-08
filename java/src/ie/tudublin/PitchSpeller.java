@@ -80,8 +80,8 @@ public class PitchSpeller {
         for(int i = 0; i<frequencies.length; i++ ){
             if(frequency < frequencies[i+1]){
                 float minLeft = frequency -  frequencies[i];
-                float right = frequencies[i + 1] - frequency;
-                if(minLeft<right){
+                float minRight = frequencies[i + 1] - frequency;
+                if(minLeft < minRight){
                     return spellings[i];
                 } else{
                     return spellings[i + 1];
